@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Destroy(this, 10);
+        Destroy(gameObject, 3);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +35,6 @@ public class Bullet : MonoBehaviour
             //explode
         }
         
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

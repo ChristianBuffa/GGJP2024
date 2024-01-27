@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
+    private PhysicsMaterial2D material;
+    
     private bool onGround;
     private float friction;
 
@@ -35,7 +37,10 @@ public class Ground : MonoBehaviour
 
     private void RetrieveFriction(Collision2D collision)
     {
-        PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
+        if(material != null)
+            material = collision.rigidbody.sharedMaterial;
+        else
+            Debug.LogWarning("Missing physics mat component in " + gameObject.name);
 
         friction = 0;
 
