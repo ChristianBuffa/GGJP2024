@@ -13,7 +13,8 @@ public class Shooting : MonoBehaviour
         DiagonalFront,
         DiagonalBack
     }
-    
+    private float shootTimer;
+
     [SerializeField] private Transform spawnPosition;
     
     public Bullet currentBullet;
@@ -23,6 +24,7 @@ public class Shooting : MonoBehaviour
     private void Update()
     {
         CheckInput();
+        shootTimer -= Time.deltaTime;
     }
 
     private void CheckInput()
@@ -54,13 +56,14 @@ public class Shooting : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if(shootTimer <= 0)
             Shoot();
         }
     }
 
     private void Shoot()
     {
-        Debug.Log("suca");
+        shootTimer = currentBullet.FireCooldown;
         
         if (_shootingStance == ShootingStance.Up)
         {

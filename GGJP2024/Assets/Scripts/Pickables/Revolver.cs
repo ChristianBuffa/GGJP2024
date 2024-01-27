@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Revolver : MonoBehaviour, IPickup
+public class HeavyMachinegun : MonoBehaviour, IPickup
 {
     [SerializeField] private GameObject bulletPrefab;
 
@@ -18,4 +18,6 @@ public class Revolver : MonoBehaviour, IPickup
             OnPickUp(bulletPrefab);
         }
     }
+
+    
 }

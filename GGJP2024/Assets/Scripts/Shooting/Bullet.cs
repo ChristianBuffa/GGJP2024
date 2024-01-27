@@ -6,15 +6,25 @@ public class Bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    private float fireRate;
+    public float FireCooldown;
     public float bulletSpeed;
     private float damage;
+
+    private void OnValidate()
+    {
+        if(info != null)
+        {
+            FireCooldown = info.FireCooldown;
+            bulletSpeed = info.bulletSpeed;
+            damage = info.damage;
+        }
+    }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        fireRate = info.fireRate;
+        FireCooldown = info.FireCooldown;
         bulletSpeed = info.bulletSpeed;
         damage = info.damage;
     }
