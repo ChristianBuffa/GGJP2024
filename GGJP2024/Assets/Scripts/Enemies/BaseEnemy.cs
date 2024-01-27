@@ -19,7 +19,10 @@ public class BaseEnemy : MonoBehaviour, IAttack
     [SerializeField] private Transform[] patrolPoints;
 
     private Transform playerTransform;
-    private EnemyState state;
+    protected EnemyState state;
+
+    private Rigidbody2D rb;
+    private Collider2D col;
 
     private int currentPatrolIndex = 0;
     private bool playerDetected = false;
@@ -27,8 +30,10 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     private void Start()
     {
-        state = EnemyState.Patrol;
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
         
+        state = EnemyState.Patrol;
     }
 
     private void Update()
@@ -120,9 +125,12 @@ public class BaseEnemy : MonoBehaviour, IAttack
         bullet.rb.velocity = Vector2.left * bullet.bulletSpeed;
     }
 
-    public void OnDeath()
+    public virtual void OnDeath()
     {
         state = EnemyState.Dead;
+
+        col.enabled = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         Destroy(this.gameObject, 5);
     }
 
@@ -138,6 +146,6 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     private void GetPlayerPosition()
     {
-        playerTransform = FindObjectOfType<Shooting>().transform;
+        playerTransform = FindObjectOfType<Player>().transform;
     }
 }
