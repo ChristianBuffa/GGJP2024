@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     private float fireRate;
     public float bulletSpeed;
-    private int damage;
+    private float damage;
 
     private void Awake()
     {
