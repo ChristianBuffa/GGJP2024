@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     private float fireRate;
     public float bulletSpeed;
-    private float damage;
+    private int damage;
 
     private void Awake()
     {
@@ -24,15 +24,11 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.GetComponent<HealthComponent>())
         {
-            //deal damage
-        }
-        else
-        {
-            //explode
+            other.GetComponent<HealthComponent>().TakeDamage(damage);
         }
         
         Destroy(gameObject);

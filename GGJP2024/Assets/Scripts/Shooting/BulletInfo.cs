@@ -5,5 +5,5 @@ public class BulletInfo : ScriptableObject
 {
     public float fireRate;
     public float bulletSpeed;
-    public float damage;
+    public int damage;
 }
