@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IPickup
 {
-    public void OnPickUp();
+    public void OnPickUp(GameObject bullet);
 }
