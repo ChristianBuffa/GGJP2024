@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AiController", menuName = "InputController/AiController")] 
 public class AiController : InputController
 {
+    public float moveInput;
+    
     public override bool RetrieveJumpInput()
     {
         return true;
@@ -10,6 +12,6 @@ public class AiController : InputController
 
     public override float RetrieveMoveInput()
     {
-        return 1f;
+        return moveInput;
     }
 }
