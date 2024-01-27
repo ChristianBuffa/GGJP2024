@@ -8,6 +8,7 @@ public class HeavyMachinegun : MonoBehaviour, IPickup
     {
         Shooting shooting = FindObjectOfType<Shooting>();
         shooting.currentBullet = bullet.GetComponent<Bullet>();
+        shooting.currentBullet.SetBulletValues();
         Destroy(gameObject);
     }
 

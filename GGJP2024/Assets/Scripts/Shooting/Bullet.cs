@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     private float damage;
 
-    private void OnValidate()
+    public void SetBulletValues()
     {
         if(info != null)
         {
@@ -24,9 +24,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        FireCooldown = info.FireCooldown;
-        bulletSpeed = info.bulletSpeed;
-        damage = info.damage;
+        SetBulletValues();
     }
 
     private void Start()
