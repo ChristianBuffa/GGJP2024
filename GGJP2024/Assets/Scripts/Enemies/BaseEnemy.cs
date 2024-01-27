@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -15,24 +16,30 @@ public class BaseEnemy : MonoBehaviour, IAttack
     [SerializeField] private Bullet currentBullet;
     [SerializeField] private float detectionRange;
     [SerializeField] private float patrolSpeed;
-    [SerializeField] private float detectionResetTime = 3f; 
+    [SerializeField] private float detectionResetTime = 3f;
+    [SerializeField] private int contactDamage;
+    [SerializeField] private float maxStandTimer = 3f;
     [SerializeField] private Transform[] patrolPoints;
 
-    private Transform playerTransform;
+    protected Transform playerTransform;
     protected EnemyState state;
+    protected bool isStanding = false;
 
     private Rigidbody2D rb;
     private Collider2D col;
+    protected bool isAttacking = false;
 
     private int currentPatrolIndex = 0;
     private bool playerDetected = false;
     private float detectionTimer = 0f;
-
+    private float standTimer;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        
+
+        standTimer = maxStandTimer;
         state = EnemyState.Patrol;
     }
 
@@ -41,11 +48,26 @@ public class BaseEnemy : MonoBehaviour, IAttack
         if(state == EnemyState.Dead)
             return;
         
+        StateAction();
+        
+        if(isStanding)
+            return;
+        
         GetPlayerPosition();
 
         CheckPlayerState();
+    }
 
-        StateAction();
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("collision");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("hit player");
+            other.gameObject.GetComponent<HealthComponent>().TakeDamage(contactDamage);
+            TransitionToState(EnemyState.Stand);
+            isAttacking = false;
+        }
     }
 
     private void CheckPlayerState()
@@ -59,11 +81,12 @@ public class BaseEnemy : MonoBehaviour, IAttack
             
             if (detectionTimer <= 0f)
             {
+                isStanding = true;
                 playerDetected = false;
                 detectionTimer = 0f; 
             }
         }
-        else if (distance < detectionRange)
+        else if (distance < detectionRange && !isStanding)
         {
             TransitionToState(EnemyState.Attack);
             detectionTimer = detectionResetTime; 
@@ -94,8 +117,16 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     private void Stand()
     {
-        //stand around
+        isStanding = true;
+        standTimer -= Time.deltaTime;
+
+        if (standTimer <= 0f)
+        {
+            standTimer = maxStandTimer;
+            isStanding = false;
+        }
     }
+
     
     private void Patrol()
     {
@@ -114,12 +145,23 @@ public class BaseEnemy : MonoBehaviour, IAttack
         }
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         playerDetected = true;
+        
+        Vector3 spawnPosition;
+        Quaternion spawnRotation;
 
-        Vector3 spawnPosition = transform.position + new Vector3(-1, 0, 0);
-        Quaternion spawnRotation = Quaternion.Euler(0,0,180);
+        if (playerTransform.position.x > transform.position.x)
+        {
+            spawnPosition = transform.position + new Vector3(1, 0, 0);
+            spawnRotation = Quaternion.identity;
+        }
+        else
+        {
+            spawnPosition = transform.position + new Vector3(-1, 0, 0);
+            spawnRotation = Quaternion.Euler(0,0,180);
+        }
 
         Bullet bullet = Instantiate(currentBullet, spawnPosition, spawnRotation);
         bullet.rb.velocity = Vector2.left * bullet.bulletSpeed;
@@ -134,7 +176,7 @@ public class BaseEnemy : MonoBehaviour, IAttack
         Destroy(this.gameObject, 5);
     }
 
-    private void TransitionToState(EnemyState newState)
+    protected void TransitionToState(EnemyState newState)
     {
         state = newState;
     }

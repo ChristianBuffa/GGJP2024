@@ -2,130 +2,44 @@ using UnityEngine;
 
 public class ChargeUnicorn : BaseEnemy
 {
-    [SerializeField] private Bullet currentBullet;
-    [SerializeField] private float detectionRange;
-    [SerializeField] private float patrolSpeed;
+    [SerializeField] private float chargeRange;
     [SerializeField] private float chargeSpeed;
-    [SerializeField] private float detectionResetTime = 3f;
-    [SerializeField] private float maxChargeRange;
-    [SerializeField] private Transform[] patrolPoints;
 
-    private Transform playerTransform;
-    private EnemyState state;
+    private Vector3 chargeStartPosition;
+    private bool charging = false;
 
-    private int currentPatrolIndex = 0;
-    private bool playerDetected = false;
-    private float detectionTimer = 0f;
-
-    private void Start()
+    public override void Attack()
     {
-        state = EnemyState.Patrol;
-    }
-
-    private void Update()
-    {
-        GetPlayerPosition();
-
-        CheckPlayerState();
-
-        StateAction();
-    }
-
-    private void CheckPlayerState()
-    {
-        float distance = GetPlayerDistance();
-
-        if(playerDetected)
+        if (!charging)
         {
-            detectionTimer -= Time.deltaTime;
-            state = EnemyState.Stand;
-            
-            if (detectionTimer <= 0f)
+            charging = true;
+            chargeStartPosition = transform.position;
+
+            Vector3 chargePosition;
+
+            if (playerTransform.position.x < transform.position.x)
             {
-                playerDetected = false;
-                detectionTimer = 0f; 
+                chargePosition = transform.position + Vector3.left * chargeRange;
             }
-        }
-        else if (distance < detectionRange)
-        {
-            TransitionToState(EnemyState.Attack);
-            detectionTimer = detectionResetTime; 
-        }
-        else
-        {
-            TransitionToState(EnemyState.Patrol);
+            else
+            {
+                chargePosition = transform.position + Vector3.right * chargeRange;
+            }
+
+            StartCoroutine(ChargeTowardsPosition(chargePosition));
         }
     }
 
-    private void StateAction()
+    private System.Collections.IEnumerator ChargeTowardsPosition(Vector3 targetPosition)
     {
-        switch (state)
+        while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
-            case EnemyState.Stand:
-                Stand();
-                break;
-                
-            case EnemyState.Patrol:
-                Patrol();
-                break;
-
-            case EnemyState.Attack:
-                Attack();
-                break;
-        }
-    }
-
-    private void Stand()
-    {
-        //stand around
-    }
-    
-    private void Patrol()
-    {
-        if (patrolPoints.Length == 0)
-        {
-            Debug.LogError("No patrol points assigned for the enemy.");
-            return;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, chargeSpeed * Time.deltaTime);
+            yield return null;
         }
 
-        Vector3 targetPosition = patrolPoints[currentPatrolIndex].position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, patrolSpeed * Time.deltaTime);
+        charging = false;
 
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-        {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-        }
-    }
-
-    public void Attack()
-    {
-        Vector3 targetPosition = FindObjectOfType<Shooting>().transform.position;
-
-        if (Vector3.Distance(transform.position, targetPosition) > maxChargeRange)
-        {
-            targetPosition.x = -maxChargeRange;
-        }
-        
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, chargeSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-        {
-            state = EnemyState.Patrol;
-        }
-    }
-
-    private void TransitionToState(EnemyState newState)
-    {
-        state = newState;
-    }
-
-    private float GetPlayerDistance()
-    {
-        return Vector2.Distance(transform.position, playerTransform.position);
-    }
-
-    private void GetPlayerPosition()
-    {
-        playerTransform = FindObjectOfType<Shooting>().transform;
+        TransitionToState(EnemyState.Stand);
     }
 }
