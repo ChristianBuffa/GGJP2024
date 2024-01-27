@@ -1,17 +1,17 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-public class BaseEnemy : MonoBehaviour
+public enum EnemyState
 {
-    public enum EnemyState
-    {
-        Stand,
-        Patrol,
-        Attack,
-        Dash,
-        Dead
-    }
+    Stand,
+    Patrol,
+    Attack,
+    Dash,
+    Dead
+}
 
+public class BaseEnemy : MonoBehaviour, IAttack
+{
     [SerializeField] private Bullet currentBullet;
     [SerializeField] private float detectionRange;
     [SerializeField] private float patrolSpeed;
@@ -28,10 +28,14 @@ public class BaseEnemy : MonoBehaviour
     private void Start()
     {
         state = EnemyState.Patrol;
+        
     }
 
     private void Update()
     {
+        if(state == EnemyState.Dead)
+            return;
+        
         GetPlayerPosition();
 
         CheckPlayerState();
@@ -105,7 +109,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         playerDetected = true;
 
@@ -114,6 +118,12 @@ public class BaseEnemy : MonoBehaviour
 
         Bullet bullet = Instantiate(currentBullet, spawnPosition, spawnRotation);
         bullet.rb.velocity = Vector2.left * bullet.bulletSpeed;
+    }
+
+    public void OnDeath()
+    {
+        state = EnemyState.Dead;
+        Destroy(this.gameObject, 5);
     }
 
     private void TransitionToState(EnemyState newState)
