@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed233a62d0abad478c9ee0363a48f43, type: 3}
-  m_Name: BaseBullet
+  m_Name: LongRange
   m_EditorClassIdentifier: 
-  FireCooldown: 0.3
-  bulletSpeed: 30
-  damage: 1
+  FireCooldown: 1
+  bulletSpeed: 20
+  damage: 2

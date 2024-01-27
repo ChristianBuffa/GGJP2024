@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2433602120999452101}
   - component: {fileID: 8410355411251646728}
   m_Layer: 0
-  m_Name: Bullet2
+  m_Name: HeavyMachinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 021e306c461a1aa41bb6c8e9413fa584, type: 2}
   rb: {fileID: 0}
+  fireRate: -1
   bulletSpeed: 0
 --- !u!50 &8410355411251646728
 Rigidbody2D:
