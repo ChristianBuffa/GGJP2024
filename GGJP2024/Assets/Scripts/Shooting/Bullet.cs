@@ -34,5 +34,7 @@ public class Bullet : MonoBehaviour
         {
             //explode
         }
+        
+        Destroy(this);
     }
 }
