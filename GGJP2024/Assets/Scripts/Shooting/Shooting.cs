@@ -19,10 +19,11 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private float bulletSpawnRange = 2f;
-    [SerializeField] private Animator braccioAnimator;
     
     public Bullet currentBullet;
     public static bool IsShooting = false;
+
+    private Move moveComponent;
 
     private ShootingStance _shootingStance;
 
@@ -74,8 +75,8 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (shootTimer <= 0)
-            else
                 Shoot();
+            else
                 IsShooting = false;
         }
     }
@@ -92,7 +93,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(0, bulletSpawnRange, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  Vector2.up * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootUp");
+            animator.SetTrigger("ShootUp");
         }
         else if (_shootingStance == ShootingStance.Down)
         {
@@ -100,7 +101,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(0, -bulletSpawnRange, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  Vector2.down * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootDown");
+            animator.SetTrigger("ShootDown");
         }
         else if(_shootingStance == ShootingStance.DiagonalFront)
         {
@@ -108,7 +109,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, bulletSpawnRange, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  new Vector2(0.5f, 0.5f) * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootUpR");
+            animator.SetTrigger("ShootUpR");
         }
         else if(_shootingStance == ShootingStance.DiagonalBack)
         {
@@ -116,7 +117,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, bulletSpawnRange, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  new Vector2(-0.5f, 0.5f) * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootUpR");
+            animator.SetTrigger("ShootUpR");
         }
         else if (_shootingStance == ShootingStance.Backwards)
         {
@@ -124,7 +125,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, bulletSpawnRange, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  Vector2.left * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootForward");
+            animator.SetTrigger("ShootForward");
         }
         else
         {
@@ -132,7 +133,7 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, 0, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  Vector2.right * bullet.bulletSpeed;
-            braccioAnimator.SetTrigger("ShootForward");
+            animator.SetTrigger("ShootForward");
         }
     }
 }

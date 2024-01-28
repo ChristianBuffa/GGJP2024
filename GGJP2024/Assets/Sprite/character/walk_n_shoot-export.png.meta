@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a80d32d5766b55a4bb7cb85a8d097a95
+guid: 04c96909b95197842ab5ce7d5102924f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump-export_0
+      name: walk_n_shoot-export_0
       rect:
         serializedVersion: 2
-        x: 70
+        x: 0
         y: 0
-        width: 170
-        height: 320
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54adb785db5a82c4a8ce51381c867923
-      internalID: -1391952753
+      spriteID: 0ac0bc53a9f7a06479feab7bb307e288
+      internalID: -1753795814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_1
+      name: walk_n_shoot-export_1
       rect:
         serializedVersion: 2
-        x: 380
+        x: 340
         y: 0
-        width: 190
-        height: 250
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9ffe0d55fe6c1747ad492f82ab29462
-      internalID: 1068766994
+      spriteID: 1fc74b38e7f329a4c836590f4fae532f
+      internalID: -1814749797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_2
+      name: walk_n_shoot-export_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 680
         y: 0
-        width: 190
-        height: 210
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f640016640d6fb409327cdc33dc8e37
-      internalID: 876562705
+      spriteID: 6c416d5d91f796c428862d4660b01469
+      internalID: 1625558419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_3
+      name: walk_n_shoot-export_3
       rect:
         serializedVersion: 2
         x: 1020
         y: 0
-        width: 190
-        height: 210
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 931076e6e896910468ded8329932943d
-      internalID: -1391121972
+      spriteID: ebfef36c7dc667e4f9f007dba040981b
+      internalID: -1889629648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_4
+      name: walk_n_shoot-export_4
       rect:
         serializedVersion: 2
         x: 1360
-        y: 70
-        width: 160
-        height: 300
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3872e7092c5883f458fcd4c5be37988b
-      internalID: -1008284481
+      spriteID: a720d17617cb3114eaa2fea6a3472b0e
+      internalID: 1906100495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_5
+      name: walk_n_shoot-export_5
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 160
-        width: 160
-        height: 300
+        x: 1700
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f264e64a5bacf864ca519fb35af0489e
-      internalID: 313001199
+      spriteID: 383f0a260c01edb439c2f543bbdae509
+      internalID: 334241075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_6
+      name: walk_n_shoot-export_6
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 200
-        width: 160
-        height: 300
+        x: 2040
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeb955adfcdbe01429cf3b91edf26dd7
-      internalID: -345560203
+      spriteID: e0bf84dd9243c8f4590b4707c299bd2a
+      internalID: 1636281954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_7
+      name: walk_n_shoot-export_7
       rect:
         serializedVersion: 2
-        x: 2320
-        y: 200
-        width: 160
-        height: 300
+        x: 2380
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 360c9323bbf5d194c8e2ae5e2933ad5b
-      internalID: -288476142
+      spriteID: 5880bbc2a9e8b9649b37fff55cf60647
+      internalID: 334322987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_8
+      name: walk_n_shoot-export_8
       rect:
         serializedVersion: 2
-        x: 2630
-        y: 160
-        width: 170
-        height: 320
+        x: 2720
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebad3361d84474c43bc71fb03d1319bc
-      internalID: 18760895
+      spriteID: f3fc822a46803e048ba67cbc872b8374
+      internalID: 245349455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump-export_9
+      name: walk_n_shoot-export_9
       rect:
         serializedVersion: 2
-        x: 2940
-        y: 160
-        width: 190
-        height: 250
+        x: 3060
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,29 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b7581ce39b1724baecbbfbeb5335ec
-      internalID: 2080021099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump-export_10
-      rect:
-        serializedVersion: 2
-        x: 3270
-        y: 160
-        width: 170
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71e90008db698b2478200cfec0751583
-      internalID: -1351250103
+      spriteID: c1d8cc241c673fd4c8d9adf5b3a8a8e0
+      internalID: -305833286
       vertices: []
       indices: 
       edges: []
@@ -351,17 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jump-export_0: -1391952753
-      jump-export_1: 1068766994
-      jump-export_10: -1351250103
-      jump-export_2: 876562705
-      jump-export_3: -1391121972
-      jump-export_4: -1008284481
-      jump-export_5: 313001199
-      jump-export_6: -345560203
-      jump-export_7: -288476142
-      jump-export_8: 18760895
-      jump-export_9: 2080021099
+      walk_n_shoot-export_0: -1753795814
+      walk_n_shoot-export_1: -1814749797
+      walk_n_shoot-export_2: 1625558419
+      walk_n_shoot-export_3: -1889629648
+      walk_n_shoot-export_4: 1906100495
+      walk_n_shoot-export_5: 334241075
+      walk_n_shoot-export_6: 1636281954
+      walk_n_shoot-export_7: 334322987
+      walk_n_shoot-export_8: 245349455
+      walk_n_shoot-export_9: -305833286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

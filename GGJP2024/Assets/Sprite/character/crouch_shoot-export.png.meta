@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 71a30ece7f523114cab20c3a50051849
+guid: 12b601f6940acb849816e1d6a20cf288
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crouch-export_0
+      name: crouch_shoot-export_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 10
-        width: 170
-        height: 320
+        x: 0
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd4ccb4c3273ae4cb5765b7b12364e9
-      internalID: 2143406248
+      spriteID: ff01ef87eb575b64ea78e58f49e03384
+      internalID: 254377103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crouch-export_1
+      name: crouch_shoot-export_1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 10
-        width: 170
-        height: 320
+        x: 340
+        y: 0
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,50 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fa852b3ffa1f894586cc7d7b61c5304
-      internalID: 1562506371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crouch-export_2
-      rect:
-        serializedVersion: 2
-        x: 760
-        y: 10
-        width: 190
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf6f3208ce2b6a44d81dd14f2cc7b814
-      internalID: 1757203888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crouch-export_3
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 10
-        width: 190
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 198a4dace0e2055489db63668d2bffb0
-      internalID: -2052463173
+      spriteID: b3db99b23fb65724d8ac5fa877b3a401
+      internalID: -1623984726
       vertices: []
       indices: 
       edges: []
@@ -204,10 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crouch-export_0: 2143406248
-      crouch-export_1: 1562506371
-      crouch-export_2: 1757203888
-      crouch-export_3: -2052463173
+      crouch_shoot-export_0: 254377103
+      crouch_shoot-export_1: -1623984726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

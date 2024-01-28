@@ -113,19 +113,19 @@ TextureImporter:
       name: shot_su_dx-export_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 340
-        height: 340
+        x: 130
+        y: 10
+        width: 250
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa02006736a5e974f83214944c9ff7b9
-      internalID: -1959035385
+      spriteID: 3863b8feb8f67384795e5211301a5171
+      internalID: -2093360468
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: shot_su_dx-export_1
       rect:
         serializedVersion: 2
-        x: 540
-        y: 100
-        width: 340
-        height: 340
+        x: 570
+        y: 10
+        width: 190
+        height: 420
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5426f9ff0261ccf4a8bbace6b6885ce7
-      internalID: 788690832
+      spriteID: e87f4dbed5e81e148adde074cb132d41
+      internalID: 417880231
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shot_su_dx-export_0: -1959035385
-      shot_su_dx-export_1: 788690832
+      shot_su_dx-export_0: -2093360468
+      shot_su_dx-export_1: 417880231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
