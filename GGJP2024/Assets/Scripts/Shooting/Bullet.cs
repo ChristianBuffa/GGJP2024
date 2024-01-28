@@ -1,15 +1,15 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Bullet : MonoBehaviour
 {
-    [FormerlySerializedAs("info")] [SerializeField] private BulletInfo bulletInfo;
+    [SerializeField] private BulletInfo bulletInfo;
 
     public Rigidbody2D rb;
 
     public float FireCooldown;
     public float bulletSpeed;
     private int damage;
+    public int bulletNumber;
 
     public void SetBulletValues(BulletInfo info)
     {
@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
             FireCooldown = info.FireCooldown;
             bulletSpeed = info.bulletSpeed;
             damage = info.damage;
+            bulletNumber = info.bulletNumber;
         }
     }
 

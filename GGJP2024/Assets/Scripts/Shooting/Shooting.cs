@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private float bulletSpawnRange = 2f;
+    [SerializeField] private BulletInfo standardBulletInfo;
     
     public Bullet currentBullet;
     public static bool IsShooting = false;
@@ -135,5 +136,14 @@ public class Shooting : MonoBehaviour
             bullet.rb.velocity =  Vector2.right * bullet.bulletSpeed;
             animator.SetTrigger("ShootForward");
         }
+        
+        currentBullet.bulletNumber -= 1;
+        
+        if (currentBullet.bulletNumber <= 0)
+        {
+            currentBullet.SetBulletValues(standardBulletInfo);
+        }
+        
+        Debug.Log(currentBullet.bulletNumber);
     }
 }

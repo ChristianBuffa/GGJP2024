@@ -15,3 +15,4 @@ MonoBehaviour:
   FireCooldown: 0.3
   bulletSpeed: 30
   damage: 1
+  bulletNumber: 2147483647
