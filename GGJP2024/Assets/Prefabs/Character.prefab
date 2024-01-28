@@ -373,7 +373,8 @@ MonoBehaviour:
   spawnPosition: {fileID: 3862624103736936730}
   bulletSpawnRange: 2
   standardBulletInfo: {fileID: 11400000, guid: 4b7dbd1db1666624aa7d723bc6dc812a, type: 2}
-  currentBullet: {fileID: -8172423333661592724, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
+  currentBullet: {fileID: 5400478713847391696, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
+  myBullet: {fileID: -8172423333661592724, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
 --- !u!114 &5531305077330108122
 MonoBehaviour:
   m_ObjectHideFlags: 0

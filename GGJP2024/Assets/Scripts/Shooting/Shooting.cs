@@ -21,7 +21,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] private float bulletSpawnRange = 2f;
     [SerializeField] private BulletInfo standardBulletInfo;
 
-    public Bullet currentBullet;
+    public GameObject currentBullet;
+    [HideInInspector] public Bullet myBullet;
     public static bool IsShooting = false;
 
     private Move moveComponent;
@@ -32,6 +33,7 @@ public class Shooting : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         moveComponent = GetComponent<Move>();
+        myBullet = currentBullet.GetComponent<Bullet>();
     }
 
     private void Update()
@@ -86,64 +88,70 @@ public class Shooting : MonoBehaviour
     {
         IsShooting = true;
         
-        shootTimer = currentBullet.FireCooldown;
+        shootTimer = myBullet.FireCooldown;
         
         if (_shootingStance == ShootingStance.Up)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,90);
             spawnPosition.position = transform.position + new Vector3(0, bulletSpawnRange, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  Vector2.up * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.up * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootUp");
         }
         else if (_shootingStance == ShootingStance.Down)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,-90);
             spawnPosition.position = transform.position + new Vector3(0, -bulletSpawnRange, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  Vector2.down * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.down * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootDown");
         }
         else if(_shootingStance == ShootingStance.DiagonalFront)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,45);
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, bulletSpawnRange, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  new Vector2(0.5f, 0.5f) * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(0.5f, 0.5f) * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootUpR");
         }
         else if(_shootingStance == ShootingStance.DiagonalBack)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,135);
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, bulletSpawnRange, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  new Vector2(-0.5f, 0.5f) * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(-0.5f, 0.5f) * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootUpR");
         }
         else if (_shootingStance == ShootingStance.Backwards)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,180);
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, 0, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  Vector2.left * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.left * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootForward");
         }
         else
         {
             Quaternion spawnRotation = quaternion.identity;
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, 0, 0);
-            Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
-            bullet.rb.velocity =  Vector2.right * bullet.bulletSpeed;
+            GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.right * bullet.GetComponent<Bullet>().bulletSpeed;
             animator.SetTrigger("ShootForward");
         }
         
-        currentBullet.bulletNumber -= 1;
+        myBullet.bulletNumber -= 1;
         
-        if (currentBullet.bulletNumber <= 0)
+        if (myBullet.bulletNumber <= 0)
         {
-            currentBullet.SetBulletValues(standardBulletInfo);
+            myBullet.SetBulletValues(standardBulletInfo);
         }
         
-        Debug.Log(currentBullet.bulletNumber);
+        Debug.Log(myBullet.bulletNumber);
     }
 }

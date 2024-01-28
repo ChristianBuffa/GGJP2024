@@ -8,7 +8,7 @@ public class PickableBullet : MonoBehaviour, IPickup
     public void OnPickUp(BulletInfo info)
     {
         Shooting shooting = FindObjectOfType<Shooting>();
-        shooting.currentBullet.SetBulletValues(info);
+        shooting.currentBullet.GetComponent<Bullet>().SetBulletValues(info);
         Destroy(gameObject);
     }
 

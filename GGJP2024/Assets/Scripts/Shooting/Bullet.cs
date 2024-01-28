@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
             bulletNumber = info.bulletNumber;
             bulletDeathTime = info.bulletDeathTime;
             sprite = info.sprite;
+
+            renderer.sprite = sprite;
         }
     }
 
@@ -32,9 +34,6 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
-
-        if(renderer != null)
-            renderer.sprite = sprite;
 
         SetBulletValues(bulletInfo);
     }
