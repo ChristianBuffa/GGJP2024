@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262dd01852cfc5646849698cd43ca1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBullet: {fileID: -8172423333661592724, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
+  currentBullet: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
   timeTillNextAttack: 3
   detectionRange: 5
   patrolSpeed: 5

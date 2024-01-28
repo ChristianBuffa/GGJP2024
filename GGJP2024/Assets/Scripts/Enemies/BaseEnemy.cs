@@ -14,7 +14,7 @@ public enum EnemyState
 
 public class BaseEnemy : MonoBehaviour, IAttack
 {
-    [SerializeField] private Bullet currentBullet;
+    [SerializeField] private GameObject currentBullet;
     [SerializeField] private float timeTillNextAttack;
     [SerializeField] private float detectionRange;
     [SerializeField] private float patrolSpeed;
@@ -193,8 +193,9 @@ public class BaseEnemy : MonoBehaviour, IAttack
             spawnRotation = Quaternion.Euler(0,0,180);
         }
 
-        Bullet bullet = Instantiate(currentBullet, spawnPosition, spawnRotation);
-        bullet.rb.velocity = Vector2.left * bullet.bulletSpeed;
+        GameObject bullet = Instantiate(currentBullet, spawnPosition, spawnRotation);
+        Rigidbody2D rigidBody = bullet.GetComponent<Rigidbody2D>();
+        rigidBody.velocity = Vector2.left * bullet.GetComponent<EnemyBullet>().bulletSpeed;
 
         StartCoroutine(ResetAttack());
     }

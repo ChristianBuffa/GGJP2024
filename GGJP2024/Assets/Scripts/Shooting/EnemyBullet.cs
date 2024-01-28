@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] private BulletInfo bulletInfo;
 
@@ -45,13 +44,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if(other.CompareTag("Player"))
         {
             if (other.GetComponent<HealthComponent>())
             {
                 other.GetComponent<HealthComponent>().TakeDamage(damage);
             }
-
+            
             Destroy(gameObject);
         }
     }
