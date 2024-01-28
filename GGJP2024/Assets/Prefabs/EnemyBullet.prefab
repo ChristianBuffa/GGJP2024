@@ -99,12 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7336d28a845484bb74ae858e8d2313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletInfo: {fileID: 0}
+  bulletInfo: {fileID: 11400000, guid: 4b7dbd1db1666624aa7d723bc6dc812a, type: 2}
   rb: {fileID: 0}
   FireCooldown: 0
   bulletSpeed: 0
   bulletNumber: 0
-  bulletDeathTime: 0
+  bulletDeathTime: 5
 --- !u!50 &-2145003570255431242
 Rigidbody2D:
   serializedVersion: 4
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
