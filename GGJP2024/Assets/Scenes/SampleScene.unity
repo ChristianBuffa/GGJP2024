@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7140378, g: 0.51439697, b: 0.6476507, a: 1}
+  m_IndirectSpecularColor: {r: 0.20837422, g: 0.20837422, b: 0.20837422, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,6 +216,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 

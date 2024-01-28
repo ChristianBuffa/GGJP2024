@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public enum EnemyState
 public class BaseEnemy : MonoBehaviour, IAttack
 {
     [SerializeField] private Bullet currentBullet;
+    [SerializeField] private float timeTillNextAttack;
     [SerializeField] private float detectionRange;
     [SerializeField] private float patrolSpeed;
     [SerializeField] private float detectionResetTime = 3f;
@@ -50,6 +52,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     private void Update()
     {
+        Debug.Log(state);
+        
         if(state == EnemyState.Dead)
             return;
         
@@ -86,12 +90,12 @@ public class BaseEnemy : MonoBehaviour, IAttack
             
             if (detectionTimer <= 0f)
             {
-                isStanding = true;
                 playerDetected = false;
-                detectionTimer = 0f; 
+                detectionTimer = detectionResetTime; 
             }
         }
-        else if (distance < detectionRange && !isStanding)
+        
+        if (distance < detectionRange && !isStanding)
         {
             TransitionToState(EnemyState.Attack);
             detectionTimer = detectionResetTime; 
@@ -115,7 +119,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
                 break;
 
             case EnemyState.Attack:
-                Attack();
+                if(!isAttacking)
+                    Attack();
                 break;
         }
     }
@@ -125,11 +130,14 @@ public class BaseEnemy : MonoBehaviour, IAttack
         isStanding = true;
         standTimer -= Time.deltaTime;
         animator.SetBool("IsRunning", false);
+        
+        Debug.Log(standTimer);
 
         if (standTimer <= 0f)
         {
             standTimer = maxStandTimer;
             isStanding = false;
+            TransitionToState(EnemyState.Patrol);
         }
     }
 
@@ -166,8 +174,11 @@ public class BaseEnemy : MonoBehaviour, IAttack
     {
         animator.SetTrigger("Attack");
         
-        playerDetected = true;
+        TransitionToState(EnemyState.Attack);
         
+        playerDetected = true;
+        isAttacking = true;
+
         Vector3 spawnPosition;
         Quaternion spawnRotation;
 
@@ -184,6 +195,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
         Bullet bullet = Instantiate(currentBullet, spawnPosition, spawnRotation);
         bullet.rb.velocity = Vector2.left * bullet.bulletSpeed;
+
+        StartCoroutine(ResetAttack());
     }
 
     public virtual void OnDeath()
@@ -212,5 +225,11 @@ public class BaseEnemy : MonoBehaviour, IAttack
     private void GetPlayerPosition()
     {
         playerTransform = FindObjectOfType<Player>().transform;
+    }
+
+    IEnumerator ResetAttack()
+    {
+        yield return new WaitForSeconds(timeTillNextAttack);
+        isAttacking = false;
     }
 }
