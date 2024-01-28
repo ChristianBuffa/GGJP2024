@@ -3,6 +3,7 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
+    [SerializeField] private GameObject scudo;
     private int currentHealth;
 
     private int playerMaxHealth = 1;
@@ -30,6 +31,7 @@ public class HealthComponent : MonoBehaviour
     {
         if (!hasShield)
         {
+            scudo.SetActive(true);
             hasShield = true;
             currentHealth++;
         }
@@ -38,7 +40,10 @@ public class HealthComponent : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (hasShield)
+        {
+            scudo.SetActive(false);
             hasShield = false;
+        }
         else
             currentHealth -= damage;
         

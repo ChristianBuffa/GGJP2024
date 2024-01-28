@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  scudo: {fileID: 4876181388110192909}
   hasShield: 0
 --- !u!114 &6755411475722545182
 MonoBehaviour:
