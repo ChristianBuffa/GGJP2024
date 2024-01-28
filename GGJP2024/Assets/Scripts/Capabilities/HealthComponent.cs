@@ -6,6 +6,7 @@ public class HealthComponent : MonoBehaviour
     private int currentHealth;
 
     private int playerMaxHealth = 1;
+    public bool hasShield = false;
     
     private Player player;
     private BaseEnemy enemy;
@@ -16,19 +17,31 @@ public class HealthComponent : MonoBehaviour
         enemy = GetComponent<BaseEnemy>();
 
         if (player != null)
+        {
             currentHealth = playerMaxHealth;
+            hasShield = true;
+        }
+
         if (enemy != null)
             currentHealth = maxHealth;
     }
 
     public void ShieldPickUp()
     {
-        currentHealth++;
+        if (!hasShield)
+        {
+            hasShield = true;
+            currentHealth++;
+        }
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        if (hasShield)
+            hasShield = false;
+        else
+            currentHealth -= damage;
+        
 
         if (currentHealth <= 0)
         {

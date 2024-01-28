@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8750560146372277405}
   - component: {fileID: 1187764662367546250}
-  - component: {fileID: 2433602120999452101}
   - component: {fileID: 8410355411251646728}
   m_Layer: 0
   m_Name: HeavyMachinegun
@@ -86,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2433602120999452101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4247883332356353792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54797c4d0aedde74b85b908b04c875d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info: {fileID: 11400000, guid: 021e306c461a1aa41bb6c8e9413fa584, type: 2}
-  rb: {fileID: 0}
-  fireRate: -1
-  bulletSpeed: 0
 --- !u!50 &8410355411251646728
 Rigidbody2D:
   serializedVersion: 4

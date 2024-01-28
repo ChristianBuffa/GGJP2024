@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Revolver : MonoBehaviour, IPickup
+public class PickableBullet : MonoBehaviour, IPickup
 {
     [SerializeField] private GameObject bulletPrefab;
 
@@ -8,6 +8,7 @@ public class Revolver : MonoBehaviour, IPickup
     {
         Shooting shooting = FindObjectOfType<Shooting>();
         shooting.currentBullet = bullet.GetComponent<Bullet>();
+        shooting.currentBullet.SetBulletValues();
         Destroy(gameObject);
     }
 
