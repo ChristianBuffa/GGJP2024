@@ -12,6 +12,8 @@ public class ChargeUnicorn : BaseEnemy
     {
         if (!charging)
         {
+            animator.SetTrigger("Attack");
+            
             charging = true;
             chargeStartPosition = transform.position;
 

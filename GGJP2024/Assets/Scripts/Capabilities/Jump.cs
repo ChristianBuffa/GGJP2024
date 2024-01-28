@@ -11,6 +11,7 @@ public class Jump : MonoBehaviour
     private Rigidbody2D rb;
     private Ground ground;
     private Vector2 velocity;
+    private Animator animator;
 
     private int jumpPhase;
     private float defaultGravityScale;
@@ -22,6 +23,7 @@ public class Jump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        animator = GetComponent<Animator>();
 
         defaultGravityScale = 1f;
     }
@@ -66,6 +68,11 @@ public class Jump : MonoBehaviour
     {
         if (onGround || jumpPhase < maxAirJumps)
         {
+            if(Shooting.IsShooting)
+                animator.SetTrigger("JumpShoot");
+            else
+                animator.SetTrigger("Jump");
+            
             jumpPhase++;
 
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);

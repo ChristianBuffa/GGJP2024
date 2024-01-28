@@ -24,12 +24,12 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     protected Transform playerTransform;
     protected EnemyState state;
+    protected Animator animator;
     protected bool isStanding = false;
 
     private Rigidbody2D rb;
     private Collider2D col;
     private SpriteManagement spriteManager;
-    private Animator animator;
     protected bool isAttacking = false;
 
     private int currentPatrolIndex = 0;

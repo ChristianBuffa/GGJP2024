@@ -15,6 +15,8 @@ public class KamikazeUnicorn : BaseEnemy, IExplode
     {
         if (!charging)
         {
+            animator.SetTrigger("Attack");
+            
             charging = true;
             chargeStartPosition = transform.position;
 
