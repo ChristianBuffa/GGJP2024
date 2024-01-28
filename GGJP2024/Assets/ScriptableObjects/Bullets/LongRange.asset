@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed233a62d0abad478c9ee0363a48f43, type: 3}
   m_Name: LongRange
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 1b6847c2cc68fc64da1db4f445d47f4a, type: 3}
   FireCooldown: 1
   bulletSpeed: 20
   damage: 2
+  bulletNumber: 5
+  bulletDeathTime: 1

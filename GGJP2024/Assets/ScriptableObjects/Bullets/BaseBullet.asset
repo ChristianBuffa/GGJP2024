@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed233a62d0abad478c9ee0363a48f43, type: 3}
   m_Name: BaseBullet
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 99e0beb5a0e815d4c845ca30e219d9ec, type: 3}
   FireCooldown: 0.3
   bulletSpeed: 30
   damage: 1
   bulletNumber: 2147483647
+  bulletDeathTime: 50

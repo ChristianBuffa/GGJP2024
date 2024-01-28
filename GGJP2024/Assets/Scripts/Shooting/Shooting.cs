@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private float bulletSpawnRange = 2f;
     [SerializeField] private BulletInfo standardBulletInfo;
-    
+
     public Bullet currentBullet;
     public static bool IsShooting = false;
 

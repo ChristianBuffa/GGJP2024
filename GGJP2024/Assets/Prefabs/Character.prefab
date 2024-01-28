@@ -357,7 +357,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7043098186590090020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 3862624103736936730}
   bulletSpawnRange: 2
-  braccioAnimator: {fileID: 599895737864111251}
+  standardBulletInfo: {fileID: 11400000, guid: 4b7dbd1db1666624aa7d723bc6dc812a, type: 2}
   currentBullet: {fileID: -8172423333661592724, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
 --- !u!114 &5531305077330108122
 MonoBehaviour:
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 4ddb456873805f54c88e24fa5a0808b4, type: 2}
-  maxSpeed: 4
+  maxSpeed: 10
   maxAcceleration: 35
   maxAirAcceleration: 20
 --- !u!114 &8601861582450508052
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 4ddb456873805f54c88e24fa5a0808b4, type: 2}
-  jumpHeight: 3
+  jumpHeight: 6.23
   maxAirJumps: 0
-  downwardMovementMultiplier: 3
+  downwardMovementMultiplier: 3.2
   upwardMovementMultiplier: 1.7
 --- !u!114 &592593272046664227
 MonoBehaviour:
@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  hasShield: 0
 --- !u!114 &6755411475722545182
 MonoBehaviour:
   m_ObjectHideFlags: 0
