@@ -1,14 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PickableBullet : MonoBehaviour, IPickup
 {
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private BulletInfo bulletInfo;
 
-    public void OnPickUp(GameObject bullet)
+    public void OnPickUp(BulletInfo info)
     {
         Shooting shooting = FindObjectOfType<Shooting>();
-        shooting.currentBullet = bullet.GetComponent<Bullet>();
-        shooting.currentBullet.SetBulletValues();
+        shooting.currentBullet.SetBulletValues(info);
         Destroy(gameObject);
     }
 
@@ -16,7 +16,7 @@ public class PickableBullet : MonoBehaviour, IPickup
     {
         if (other.CompareTag("Player"))
         {
-            OnPickUp(bulletPrefab);
+            OnPickUp(bulletInfo);
         }
     }
 }

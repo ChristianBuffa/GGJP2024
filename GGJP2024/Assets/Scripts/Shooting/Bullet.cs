@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private BulletInfo info;
+    [FormerlySerializedAs("info")] [SerializeField] private BulletInfo bulletInfo;
 
     public Rigidbody2D rb;
 
@@ -10,7 +11,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     private int damage;
 
-    public void SetBulletValues()
+    public void SetBulletValues(BulletInfo info)
     {
         if(info != null)
         {
@@ -24,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        SetBulletValues();
+        SetBulletValues(bulletInfo);
     }
 
     private void Start()
