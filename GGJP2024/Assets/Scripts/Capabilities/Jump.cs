@@ -68,10 +68,7 @@ public class Jump : MonoBehaviour
     {
         if (onGround || jumpPhase < maxAirJumps)
         {
-            if(Shooting.IsShooting)
-                animator.SetTrigger("JumpShoot");
-            else
-                animator.SetTrigger("Jump");
+            animator.SetTrigger("Jump");
             
             jumpPhase++;
 
