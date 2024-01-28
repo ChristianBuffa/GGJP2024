@@ -12,22 +12,43 @@ public class Move : MonoBehaviour
     private Vector2 velocity;
     private Rigidbody2D rb;
     private Ground ground;
+    private Animator animator;
+    private SpriteManagement spriteManager;
 
     private float maxSpeedChange;
     private float Acceleration;
     private bool onGround;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        animator = GetComponent<Animator>();
+        spriteManager = GetComponent<SpriteManagement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         direction.x = input.RetrieveMoveInput();
         desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+
+        if (direction.x < 0)
+        {
+            spriteManager.ShouldFlip(true);
+        }
+        else
+        {
+            spriteManager.ShouldFlip(false);
+        }
+        
+        if (direction.x != 0)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
     }
 
     private void FixedUpdate()

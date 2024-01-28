@@ -19,14 +19,17 @@ public class BaseEnemy : MonoBehaviour, IAttack
     [SerializeField] private float detectionResetTime = 3f;
     [SerializeField] private int contactDamage;
     [SerializeField] private float maxStandTimer = 3f;
+    [SerializeField] private float spawnBulletDistance = 2f;
     [SerializeField] private Transform[] patrolPoints;
 
     protected Transform playerTransform;
     protected EnemyState state;
+    protected Animator animator;
     protected bool isStanding = false;
 
     private Rigidbody2D rb;
     private Collider2D col;
+    private SpriteManagement spriteManager;
     protected bool isAttacking = false;
 
     private int currentPatrolIndex = 0;
@@ -38,6 +41,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        spriteManager = GetComponent<SpriteManagement>();
+        animator = GetComponent<Animator>();
 
         standTimer = maxStandTimer;
         state = EnemyState.Patrol;
@@ -119,6 +124,7 @@ public class BaseEnemy : MonoBehaviour, IAttack
     {
         isStanding = true;
         standTimer -= Time.deltaTime;
+        animator.SetBool("IsRunning", false);
 
         if (standTimer <= 0f)
         {
@@ -130,6 +136,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
     
     private void Patrol()
     {
+        animator.SetBool("IsRunning", true);
+        
         if (patrolPoints.Length == 0)
         {
             Debug.LogError("No patrol points assigned for the enemy.");
@@ -139,6 +147,15 @@ public class BaseEnemy : MonoBehaviour, IAttack
         Vector3 targetPosition = patrolPoints[currentPatrolIndex].position;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, patrolSpeed * Time.deltaTime);
 
+        if (targetPosition.x < transform.position.x)
+        {
+            spriteManager.ShouldFlip(true);
+        }
+        else
+        {
+            spriteManager.ShouldFlip(false);
+        }
+        
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
@@ -147,6 +164,8 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     public virtual void Attack()
     {
+        animator.SetTrigger("Attack");
+        
         playerDetected = true;
         
         Vector3 spawnPosition;
@@ -154,12 +173,12 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
         if (playerTransform.position.x > transform.position.x)
         {
-            spawnPosition = transform.position + new Vector3(1, 0, 0);
+            spawnPosition = transform.position + new Vector3(spawnBulletDistance, 0, 0);
             spawnRotation = Quaternion.identity;
         }
         else
         {
-            spawnPosition = transform.position + new Vector3(-1, 0, 0);
+            spawnPosition = transform.position + new Vector3(-spawnBulletDistance, 0, 0);
             spawnRotation = Quaternion.Euler(0,0,180);
         }
 
@@ -169,6 +188,10 @@ public class BaseEnemy : MonoBehaviour, IAttack
 
     public virtual void OnDeath()
     {
+        animator.SetTrigger("Death");
+
+        transform.position = new Vector3(0, 1, 0) + transform.position;
+        
         state = EnemyState.Dead;
 
         col.enabled = false;
