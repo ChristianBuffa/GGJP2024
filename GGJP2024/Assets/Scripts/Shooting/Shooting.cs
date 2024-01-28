@@ -29,6 +29,7 @@ public class Shooting : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        moveComponent = GetComponent<Move>();
     }
 
     private void Update()
@@ -42,33 +43,39 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
             _shootingStance = ShootingStance.DiagonalFront;
+            moveComponent.enabled = false;
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
             _shootingStance = ShootingStance.DiagonalBack;
+            moveComponent.enabled = false;
         }
         else if(Input.GetKey(KeyCode.W))
         {
             _shootingStance = ShootingStance.Up;
+            moveComponent.enabled = false;
         }
         else if (Input.GetKey(KeyCode.S))
         {
             _shootingStance = ShootingStance.Down;
+            moveComponent.enabled = false;
         }
         else if(Input.GetKey(KeyCode.A))
         {
             _shootingStance = ShootingStance.Backwards;
+            moveComponent.enabled = true;
         }
         else
         {
             _shootingStance = ShootingStance.Forward;
+            moveComponent.enabled = true;
         }
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (shootTimer <= 0)
-                Shoot();
             else
+                Shoot();
                 IsShooting = false;
         }
     }
