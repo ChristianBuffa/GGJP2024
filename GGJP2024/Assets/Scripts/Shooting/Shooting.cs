@@ -19,7 +19,13 @@ public class Shooting : MonoBehaviour
     public Bullet currentBullet;
 
     private ShootingStance _shootingStance;
-    
+    private Move moveComponent;
+
+    private void Awake()
+    {
+        moveComponent = GetComponent<Move>();
+    }
+
     private void Update()
     {
         CheckInput();
@@ -31,32 +37,38 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
             _shootingStance = ShootingStance.DiagonalFront;
+            moveComponent.enabled = false;
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
             _shootingStance = ShootingStance.DiagonalBack;
+            moveComponent.enabled = false;
         }
         else if(Input.GetKey(KeyCode.W))
         {
             _shootingStance = ShootingStance.Up;
+            moveComponent.enabled = false;
         }
         else if (Input.GetKey(KeyCode.S))
         {
             _shootingStance = ShootingStance.Down;
+            moveComponent.enabled = false;
         }
         else if(Input.GetKey(KeyCode.A))
         {
             _shootingStance = ShootingStance.Backwards;
+            moveComponent.enabled = true;
         }
         else
         {
             _shootingStance = ShootingStance.Forward;
+            moveComponent.enabled = true;
         }
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if(shootTimer <= 0)
-            Shoot();
+                Shoot();
         }
     }
 
