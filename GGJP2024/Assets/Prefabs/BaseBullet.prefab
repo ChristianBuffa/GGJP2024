@@ -99,12 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54797c4d0aedde74b85b908b04c875d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletInfo: {fileID: 0}
+  bulletInfo: {fileID: 11400000, guid: 4b7dbd1db1666624aa7d723bc6dc812a, type: 2}
   rb: {fileID: 0}
   FireCooldown: 0.3
   bulletSpeed: 30
-  bulletNumber: 2147483599
-  bulletDeathTime: 0
+  bulletNumber: 2147483647
+  bulletDeathTime: 50
 --- !u!50 &4902904245359804105
 Rigidbody2D:
   serializedVersion: 4

@@ -123,7 +123,7 @@ public class Shooting : MonoBehaviour
         else if (_shootingStance == ShootingStance.Backwards)
         {
             Quaternion spawnRotation = Quaternion.Euler(0,0,180);
-            spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, bulletSpawnRange, 0);
+            spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, 0, 0);
             Bullet bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             bullet.rb.velocity =  Vector2.left * bullet.bulletSpeed;
             animator.SetTrigger("ShootForward");
