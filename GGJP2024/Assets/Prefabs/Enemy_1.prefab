@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentBullet: {fileID: -8172423333661592724, guid: 50fd7f94ea5d4bf458ec2c3cfac0bebb, type: 3}
+  timeTillNextAttack: 3
   detectionRange: 5
   patrolSpeed: 5
   detectionResetTime: 3
@@ -145,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  scudo: {fileID: 0}
   hasShield: 0
 --- !u!212 &7450715091191599369
 SpriteRenderer:
