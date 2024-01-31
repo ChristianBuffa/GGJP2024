@@ -101,10 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletInfo: {fileID: 11400000, guid: 4b7dbd1db1666624aa7d723bc6dc812a, type: 2}
   rb: {fileID: 0}
-  FireCooldown: 0.3
-  bulletSpeed: 1
-  bulletNumber: 9992
-  bulletDeathTime: 50
+  FireCooldown: 0.2
+  bulletSpeed: 20
+  bulletNumber: 9991
+  bulletDeathTime: 1
 --- !u!50 &4902904245359804105
 Rigidbody2D:
   serializedVersion: 4

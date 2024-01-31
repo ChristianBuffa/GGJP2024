@@ -200,9 +200,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -212,8 +224,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -281,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -327,9 +347,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -338,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -420,6 +448,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 225.48
@@ -467,6 +499,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -678,9 +722,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -689,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -917,9 +969,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -928,6 +984,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -1042,12 +1102,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -77269,12 +77341,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -77434,9 +77518,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -77445,6 +77533,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -77642,9 +77734,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -77653,6 +77749,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -78150,6 +78250,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 552.29
@@ -78197,6 +78301,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -78287,12 +78403,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -78452,9 +78580,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -78463,6 +78595,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -78576,9 +78712,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -78587,6 +78727,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -78701,12 +78845,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -78773,9 +78929,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -78784,6 +78944,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -78929,9 +79093,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -78941,8 +79117,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -79010,7 +79194,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -79118,6 +79302,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 302.48
@@ -79165,6 +79353,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -79244,6 +79444,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 310.94
@@ -79291,6 +79495,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -79378,6 +79594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 159.41
@@ -79427,6 +79647,18 @@ PrefabInstance:
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 519085110}
@@ -79447,9 +79679,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -79458,6 +79694,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -79532,6 +79772,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+--- !u!1001 &760857644
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 730039410049594068, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_Name
+      value: LongRange (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.53857
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878419038145364169, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f4adfbc4084e71449c8c48c0e19714e, type: 3}
 --- !u!1 &770074198
 GameObject:
   m_ObjectHideFlags: 0
@@ -79645,9 +79942,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -79657,8 +79966,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -79726,7 +80043,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -79741,6 +80058,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 329.34
@@ -79788,6 +80109,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -79842,12 +80175,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -80029,6 +80374,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 405.88
@@ -80076,6 +80425,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -80218,9 +80579,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -80230,8 +80603,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -80295,7 +80676,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80486,6 +80867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 451.93
@@ -80533,6 +80918,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -80648,9 +81045,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -80659,6 +81060,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -80829,6 +81234,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 542.8
@@ -80876,6 +81285,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -81179,9 +81600,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -81190,6 +81615,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -81617,9 +82046,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -81629,8 +82070,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -81698,7 +82147,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81833,9 +82282,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -81845,8 +82306,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -81910,7 +82379,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82071,9 +82540,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -82082,6 +82555,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -82164,9 +82641,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -82175,6 +82656,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -82315,9 +82800,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -82327,8 +82824,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -82392,7 +82897,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82407,6 +82912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 596.13
@@ -82454,6 +82963,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -82631,9 +83152,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -82642,6 +83167,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -82901,6 +83430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 269.73
@@ -82950,6 +83483,18 @@ PrefabInstance:
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1445597875}
@@ -82970,9 +83515,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -82981,6 +83530,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -83094,6 +83647,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 596.13
@@ -83143,6 +83700,18 @@ PrefabInstance:
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1015241631}
@@ -83155,6 +83724,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+--- !u!1001 &1440562664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2791315213546990209, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_Name
+      value: PickableArmor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.56427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.864189
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.651093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808359992656803095, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89836972c1dbbdc4d9b4f83028561260, type: 3}
 --- !u!1001 &1444742171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83220,6 +83846,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 391.7
@@ -83267,6 +83897,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -83850,9 +84492,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -83862,8 +84516,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -83931,7 +84593,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84182,9 +84844,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -84193,6 +84859,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -84267,6 +84937,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+--- !u!1001 &1587871922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4247883332356353792, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_Name
+      value: HeavyMachinegun (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9237533
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750560146372277405, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7fc02c35a7c8c1248b021c6a7ab56fb8, type: 3}
 --- !u!1 &1604133414
 GameObject:
   m_ObjectHideFlags: 0
@@ -84307,9 +85034,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -84319,8 +85058,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -84388,7 +85135,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84822,6 +85569,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101806470059518009, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6580086309774582246, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 423.5
@@ -84869,6 +85620,18 @@ PrefabInstance:
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: maxStandTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9046636763865551591, guid: d148bfcb16fddd745bfcbe4708d8457e, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -85005,9 +85768,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -85016,6 +85783,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -85156,9 +85927,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -85168,8 +85951,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -85233,7 +86024,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85429,9 +86220,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -85440,6 +86235,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -85638,9 +86437,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: contactDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: currentBullet
+      value: 
+      objectReference: {fileID: 4566063959827381663, guid: 0118aec610e6f11459902c8dd04bfefb, type: 3}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxStandTimer
       value: 2
@@ -85650,8 +86461,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: explosionRadius
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: spawnBulletDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -18909103391143478, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -85715,7 +86534,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e022fa0cbb95490409bb33fe01630ed2, type: 2}
     - target: {fileID: 8734136850221461721, guid: 69ba8ac4716aa0b4e872c1a410fdb618, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85912,12 +86731,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolSpeed
       value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: maxStandTimer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 656690430635008508, guid: 5734ded57898f0349a213d5f382ba074, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -86046,9 +86877,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596687813620289763, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: patrolSpeed
-      value: 6.2
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: maxStandTimer
@@ -86057,6 +86892,10 @@ PrefabInstance:
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: detectionRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
+      propertyPath: timeTillNextAttack
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3113194597948117580, guid: 4c995e803905f0440a34d9f5e4040044, type: 3}
       propertyPath: spawnBulletDistance
@@ -86273,3 +87112,6 @@ SceneRoots:
   - {fileID: 1528332040}
   - {fileID: 674934264}
   - {fileID: 500007429}
+  - {fileID: 1440562664}
+  - {fileID: 1587871922}
+  - {fileID: 760857644}

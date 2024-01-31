@@ -96,7 +96,8 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(0, bulletSpawnRange, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.up * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = Vector2.up * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootUp");
         }
         else if (_shootingStance == ShootingStance.Down)
@@ -105,7 +106,8 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(0, -bulletSpawnRange, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.down * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = Vector2.down * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootDown");
         }
         else if(_shootingStance == ShootingStance.DiagonalFront)
@@ -114,7 +116,8 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, bulletSpawnRange, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = new Vector2(0.5f, 0.5f) * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = new Vector2(0.5f, 0.5f) * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootUpR");
         }
         else if(_shootingStance == ShootingStance.DiagonalBack)
@@ -123,7 +126,8 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, bulletSpawnRange, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = new Vector2(-0.5f, 0.5f) * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = new Vector2(-0.5f, 0.5f) * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootUpR");
         }
         else if (_shootingStance == ShootingStance.Backwards)
@@ -132,7 +136,8 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(-bulletSpawnRange, 0, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.left * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = Vector2.left * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootForward");
         }
         else
@@ -141,9 +146,11 @@ public class Shooting : MonoBehaviour
             spawnPosition.position = transform.position + new Vector3(bulletSpawnRange, 0, 0);
             GameObject bullet = Instantiate(currentBullet, spawnPosition.position, spawnRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.right * bullet.GetComponent<Bullet>().bulletSpeed;
+            rb.velocity = Vector2.right * myBullet.bulletSpeed;
+            Destroy(bullet, myBullet.bulletDeathTime);
             animator.SetTrigger("ShootForward");
         }
+        
         
         myBullet.bulletNumber -= 1;
         

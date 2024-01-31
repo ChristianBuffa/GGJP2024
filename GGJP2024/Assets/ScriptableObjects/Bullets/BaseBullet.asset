@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BaseBullet
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 99e0beb5a0e815d4c845ca30e219d9ec, type: 3}
-  FireCooldown: 0.3
-  bulletSpeed: 1
-  damage: 1
+  FireCooldown: 0.2
+  bulletSpeed: 20
+  damage: 2
   bulletNumber: 10000
-  bulletDeathTime: 50
+  bulletDeathTime: 1

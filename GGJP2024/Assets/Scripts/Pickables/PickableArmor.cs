@@ -9,6 +9,7 @@ public class PickableArmor : MonoBehaviour
             if (!other.GetComponent<HealthComponent>().hasShield)
             {
                 other.GetComponent<HealthComponent>().ShieldPickUp();
+                gameObject.SetActive(false);
                 Destroy(gameObject);
             }
         }

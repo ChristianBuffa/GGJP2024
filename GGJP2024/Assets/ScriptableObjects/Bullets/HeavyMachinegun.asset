@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b1cb678463e7b2f4e8eef95d2b221b29, type: 3}
   FireCooldown: 0
-  bulletSpeed: 30
+  bulletSpeed: 40
   damage: 1
-  bulletNumber: 10
-  bulletDeathTime: 1
+  bulletNumber: 30
+  bulletDeathTime: 0.8

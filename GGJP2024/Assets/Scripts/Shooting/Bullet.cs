@@ -38,11 +38,6 @@ public class Bullet : MonoBehaviour
         SetBulletValues(bulletInfo);
     }
 
-    private void Start()
-    {
-        Destroy(gameObject, bulletDeathTime);
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
